@@ -1,0 +1,133 @@
+add_case:
+  -
+    title: add_case_001 -【正向】2个整数相加，结果计算正确
+    priority: 1
+    a: 1
+    b: 1
+    expected_result : 2
+
+  -
+    title: add_case_002 -【正向】2个浮点数相加，结果计算正确
+    priority: 1
+    a: -0.01
+    b: 0.02
+    expected_result: 0.01
+
+  -
+    title: add_case_003 -【正向】整数与浮点数相加，结果计算正确
+    priority: 1
+    a: 10
+    b: 0.02
+    expected_result: 10.02
+
+  -
+    title: add_case_004 -【边界】有效边界值相加，结果计算正确
+    priority: 2
+    a: 98.99
+    b: 99
+    expected_result: 197.99
+
+  -
+    title: add_case_005 -【边界】有效边界值相加，结果计算正确
+    priority: 2
+    a: 99
+    b: 98.99
+    expected_result: 197.99
+
+  -
+    title: add_case_006 -【边界】有效边界值相加，结果计算正确
+    priority: 2
+    a: -98.99
+    b: -99
+    expected_result: -197.99
+
+  -
+    title: add_case_007 -【边界】有效边界值相加，结果计算正确
+    priority: 2
+    a: -99
+    b: -98.99
+    expected_result: -197.99
+
+  -
+    title: add_case_008 -【边界】无效边界值相加，给出提示信息
+    priority: 2
+    a: 99.01
+    b: 0
+    expected_result: 参数大小超出范围
+
+  -
+    title: add_case_009 -【边界】无效边界值相加，给出提示信息
+    priority: 2
+    a: -99.01
+    b: -1
+    expected_result: 参数大小超出范围
+
+  -
+    title: add_case_010 -【边界】无效边界值相加，给出提示信息
+    priority: 2
+    a: 2
+    b: 99.01
+    expected_result: 参数大小超出范围
+
+  -
+    title: add_case_011 -【边界】无效边界值相加，给出提示信息
+    priority: 2
+    a: 1
+    b: -99.01
+    expected_result: 参数大小超出范围
+
+  -
+
+    title: add_case_012 -【类型】输入中文，给出提示信息
+    priority: 2
+    a: 文
+    b: 9.3
+    expected_result: 类型错误
+  -
+    title: add_case_013 -【类型】输入中文，给出提示信息
+    priority: 2
+    a: 4
+    b: 字
+    expected_result: 类型错误
+
+  -
+    title: add_case_014 -【类型】输入英文，给出提示信息
+    priority: 2
+    a: nu
+    b: 0.2
+    expected_result: 类型错误
+
+  -
+    title: add_case_015 -【类型】输入英文，给出提示信息
+    priority: 2
+    a: 30
+    b: tu
+    expected_result: 类型错误
+
+  -
+    title: add_case_016 -【类型】输入特殊字符，给出提示信息
+    priority: 2
+    a: '*&'
+    b: 0.2
+    expected_result: 类型错误
+
+  -
+    title: add_case_017 -【类型】输入特殊字符，给出提示信息
+    priority: 2
+    a: 21.45
+    b: '@'
+    expected_result: 类型错误
+
+  -
+    title: add_case_018 -【类型】输入为空，给出提示信息
+    priority: 3
+    a: {}
+    b: 20.93
+    expected_reslt: 参数为空
+
+  -
+    title: add_case_019 -【类型】输入为空，给出提示信息
+    priority: 3
+    a: -3
+    b: {}
+    expected_result: 参数为空
